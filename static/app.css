@@ -1,0 +1,100 @@
+/* Style cho tab buttons */
+#tabs {
+    display: flex;
+    margin:1px 10px;
+}
+  
+#tabs button {
+    padding: 5px;
+    background-color: #ccc;
+    border: solid 2px green;
+    cursor: pointer;
+    border-radius: 5px;
+    color: black;
+}
+  
+#tabs button:hover {
+    background-color: #ddd;
+}
+  
+/* Style cho tab content */
+#tabContent {
+    padding: 5px;
+}
+  
+/* #tabContent > div {
+    display: none;
+}
+  
+#tabContent > div:first-child {
+    display: block;
+} */
+
+ h2 {
+   margin-top: 1px;
+   margin-bottom: 10px;
+ }
+
+/* Style cho các phần tử */
+.fileName,
+.sourceFolder,
+.destFolder,
+.fileType,
+.fileExcel {
+  margin-bottom: 5px;
+  /* display: flex */
+}
+
+.fileName,
+.fileExcel {
+  display: flex;
+}
+input[type="file"]{
+  margin-left: 20px;
+  color: green;
+}
+
+/* Style cho label */
+label {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+/* Style cho input */
+input[type="text"],
+select {
+  width: 66%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+/* Style cho button */
+button {
+  width: 33%;
+  padding: 8px 15px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style cho nút copy */
+#copyBtn, #moveBtn {
+  /* display: block; */
+  margin: auto;
+}
+
+/* Style cho kết quả */
+#result {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}

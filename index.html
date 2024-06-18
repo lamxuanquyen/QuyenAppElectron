@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./static/app.css">
+</head>
+<body>
+  <div id="tabs">
+    <button onclick="showTab(0)">Copy/Move File</button>
+    <button onclick="showTab(1)">Merger File PDF</button>
+    <button onclick="showTab(2)">Print File</button>
+  </div>
+  <div id="ads" style="height: 90px; overflow: hidden;display: flex; justify-content: center;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9128413844737365"
+    crossorigin="anonymous"></script>
+    <!-- appelectron -->
+    <ins class="adsbygoogle"
+    style="display:inline-block;width:728px;height:90px"
+    data-ad-client="ca-pub-9128413844737365"
+    data-ad-slot="4353288646"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  <div id="tabContent" >
+    <div id="tab1" style="display: block;">
+      <h2>Copy/Move File</h2>
+      <div class="fileName">
+        <label for="myFile">File excel input (.xlsx, .xls) </label>
+        <input type="file" id="myFile" accept=".xlsx,.xls">
+      </div>
+      <div class="sourceFolder">
+        <label for="sourceInput">From Folder </label>
+        <input id="sourceInput" type="text" placeholder="Enter source Folder">
+        <button id="sourceBtn">Select Source Folder</button>
+      </div>
+      <div class="destFolder">
+        <label for="destInput">To Folder</label>
+        <input id="destInput" type="text" placeholder="Enter destination Folder">
+        <button id="destBtn">Select Destination Folder</button>
+      </div>
+      <div class="fileType">
+        <label for="fileType">File type</label>
+        <select id="fileType">
+          <option value="" selected >ALL</option>
+          <option value=".pdf" >PDF</option>
+          <option value=".txt">TXT</option>
+          <option value=".doc">DOC</option>
+          <option value=".dwg">DWG</option>
+          <!-- Thêm các tùy chọn khác nếu cần -->
+        </select>
+      </div>
+      <button id="copyBtn">Copy File</button>
+      <button id="moveBtn">Move File</button>
+      <p id="result"></p>
+    </div>
+    <div id="tab2" style="display: none;">
+      <!-- Nội dung của tab 2 -->
+      <h2>Merger PDF File</h2>
+      <div class="mergerFolder">
+        <label for="pdf-folder-path">From Folder </label>
+        <input id="pdf-folder-path" type="text" placeholder="Enter folder path">
+        <button id="select-folder">Select Folder</button>
+      </div>
+      <button id="merge-pdfs">Merge PDFs</button>
+      <p id="resultMerger"></p>
+    </div>
+    <div id="tab3" style="display: none;">
+      <!-- Nội dung của tab 3 -->
+      <h2>Print PDF Files</h2>
+      <div class="fileExcel">
+        <label for="excelFile">File excel input (.xlsx, .xls) </label>
+        <input type="file" id="excelFile" accept=".xlsx,.xls">
+      </div>
+      <div class="pathFolder">
+        <label for="folderPath">Folder path</label>
+        <input id="folderPath" type="text" placeholder="Enter folder path">
+        <button id="pathBtn">Select Folder Path</button>
+      </div>
+    
+      <div>
+        <label for="printerName">Choose Print Machine</label>
+        <select id="printerName">
+          <!-- Các option sẽ được thêm vào đây -->
+        </select>
+        <button id="getPrint">Get Printers</button>
+      </div>
+      <div>
+        <label for="paperSize">Choose Paper Size</label>
+        <select id="paperSize">
+          <option value="A4" selected>A4</option>
+          <option value="A3">A3</option>
+          <option value="A2">A2</option>
+          <option value="A1">A1</option>
+          <option value="A0">A0</option>
+        </select>
+      </div>
+      <button id="printBtn">Print Files</button>
+      <p id="resultPrint"></p>
+    </div>
+  </div>
+  <script>
+    function showTab(tabIndex) {
+      const tabs = document.querySelectorAll('#tabContent > div');
+      tabs.forEach((tab, index) => {
+        if (index === tabIndex) {
+          tab.style.display = 'block';
+        } else {
+          tab.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  <script src="./static/app.js"></script>
+</body>
+</html>
